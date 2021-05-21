@@ -18,9 +18,37 @@
         width: 15rem;
         max-width: 100%;
         box-sizing: border-box;
+        position: relative;
+
+        &::before {
+            content: attr(value);
+            position: relative;
+            z-index: 1;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: inherit;
+            opacity: 0;
+            background: linear-gradient(
+                89.62deg,
+                #6f6884 0.32%,
+                #48425c 99.67%
+            );
+            transition: opacity 0.2s ease-out;
+        }
 
         &:hover {
             cursor: pointer;
+
+            &::after {
+                opacity: 1;
+            }
         }
     }
 

@@ -10,7 +10,7 @@ import "./index.scss";
 const LoginPage = () => {
     /* --- Functions --- */
     const handleLoginFormValid = () => {
-        window.location.href = "#";
+        window.location.reload();
     };
 
     /* --- Return --- */
@@ -77,7 +77,7 @@ const LoginPage = () => {
                             </div>
 
                             <div className="button-wrapper">
-                                <button type="submit">Login</button>
+                                <button type="submit" value="Login"></button>
                             </div>
                         </Form>
                     </section>
