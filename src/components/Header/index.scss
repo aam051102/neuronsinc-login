@@ -1,0 +1,22 @@
+.header {
+    background-color: #ffffff;
+    width: 100%;
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding: 15px 45px;
+    display: flex;
+
+    .logo {
+        vertical-align: bottom;
+        height: 1.75rem;
+    }
+
+    .title {
+        text-transform: uppercase;
+        font-size: 1.15rem;
+        font-family: "Neuton", Arial, Helvetica, serif;
+        margin-left: 3px;
+        line-height: 1;
+        transform: translateY(-0.25em);
+    }
+}
