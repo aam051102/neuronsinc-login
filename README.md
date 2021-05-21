@@ -37,3 +37,13 @@ To run the unit test, use the following command.
 ```
 npm run test
 ```
+
+---
+
+## If I had more time
+
+If I had more time:
+
+-   I would have liked to find a better way to place the "HUB" on the logo.
+-   I would have developed a better validation system.
+-   I would have chosen better class names in the main component.

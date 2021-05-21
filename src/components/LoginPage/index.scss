@@ -68,7 +68,6 @@
         }
     }
 
-    // TODO: IMPROVE
     &-login {
         box-sizing: border-box;
         width: 100%;
@@ -78,22 +77,23 @@
             font-weight: 300;
             font-size: 2.25rem;
             margin-top: 15px;
-            padding-bottom: 1rem;
+            padding-bottom: 0.75rem;
             margin-bottom: 2rem;
             line-height: 1;
 
             & > .underlined {
                 position: relative;
+                margin-left: -0.15em;
 
                 &::after {
                     content: "";
                     position: absolute;
-                    right: -5px;
-                    bottom: -1rem;
+                    right: 0;
+                    bottom: -0.75rem;
                     height: 4px;
                     background-color: #8166d1;
                     border-radius: 15px;
-                    width: 100%;
+                    width: calc(100% - 0.15em);
                 }
             }
 
@@ -134,18 +134,18 @@
                 margin-top: 1rem;
                 color: inherit;
 
+                .user-login_rememberme-label {
+                    user-select: none;
+                    padding-left: 1ch;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
                 /* Media queries*/
                 @media screen and (min-width: 32rem) {
                     margin-top: 0;
-                }
-            }
-
-            .user-login_rememberme-label {
-                user-select: none;
-                padding-left: 1ch;
-
-                &:hover {
-                    cursor: pointer;
                 }
             }
         }
