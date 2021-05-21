@@ -1,35 +1,16 @@
-import React, { useRef } from "react";
+import React from "react";
 import Header from "../Header";
+import Input from "../Input";
+import Form from "../Form";
 
 import DrawingLogin from "../../assets/images/drawing-login.svg";
 
 import "./index.scss";
-import Input from "../Input";
 
 const LoginPage = () => {
-    /* --- Refs --- */
-    const loginFormRef = useRef();
-
     /* --- Functions --- */
-    /**
-     * Handles login button click.
-     * @param {Event} e
-     */
-    const loginButtonClickHandler = (e) => {
-        e.preventDefault();
-
-        // Perform validity checks
-        let valid = true;
-        const data = new FormData(loginFormRef.current);
-
-        for (const [key, value] of data.entries()) {
-            console.log(key, value);
-        }
-
-        // Perform some action to indicate a successful submit.
-        if (valid) {
-            window.location.href = "#";
-        }
+    const handleLoginFormValid = () => {
+        window.location.href = "#";
     };
 
     /* --- Return --- */
@@ -39,29 +20,31 @@ const LoginPage = () => {
 
             <div className="content-area">
                 <div className="popup-area">
-                    <section className="content-left">
+                    <section className="popup-area-welcome">
                         <p>Welcome back!</p>
                         <p>
                             Nice to see you again, we hope you are doing great
                         </p>
 
                         <img
-                            className="drawing"
+                            className="illustration"
                             src={DrawingLogin}
                             alt="Illustration of person entering a door."
                         />
                     </section>
-                    <section className="content-right">
-                        <form id="login-form" ref={loginFormRef}>
-                            <h1 className="title">
-                                <span className="underlined">User </span>
-                                <span className="medium">login</span>
-                            </h1>
 
+                    <section className="popup-area-login">
+                        <h1 className="title">
+                            <span className="underlined">User </span>
+                            <span className="medium">login</span>
+                        </h1>
+
+                        <Form onFormValid={handleLoginFormValid}>
                             <Input
                                 form="user-login"
                                 type="email"
                                 name="email"
+                                autoComplete="email"
                                 required
                             />
 
@@ -69,6 +52,7 @@ const LoginPage = () => {
                                 form="user-login"
                                 type="password"
                                 name="password"
+                                autoComplete="current-password"
                                 required
                             />
 
@@ -93,15 +77,9 @@ const LoginPage = () => {
                             </div>
 
                             <div className="button-wrapper">
-                                <button
-                                    type="submit"
-                                    className="login-button"
-                                    onClick={loginButtonClickHandler}
-                                >
-                                    Login
-                                </button>
+                                <button type="submit">Login</button>
                             </div>
-                        </form>
+                        </Form>
                     </section>
                 </div>
             </div>

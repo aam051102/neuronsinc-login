@@ -1,0 +1,63 @@
+/* Form */
+.form {
+    .button-wrapper {
+        text-align: center;
+    }
+
+    button {
+        font-family: inherit;
+        font-weight: 400;
+        font-size: 1rem;
+        text-align: center;
+        border: 0;
+        color: #ffffff;
+        background-color: #48425c;
+        background: linear-gradient(89.62deg, #48425c 0.32%, #6f6884 99.67%);
+        border-radius: 10px;
+        padding: 0.75rem 2rem;
+        width: 15rem;
+        max-width: 100%;
+        box-sizing: border-box;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    input[type="checkbox"] {
+        color: inherit;
+        border: 1px solid currentColor;
+        border-radius: 9999px;
+        appearance: none;
+        display: inline-block;
+        width: 1.3rem;
+        height: 1.3rem;
+        margin: 0;
+        position: relative;
+        background-color: #ffffff;
+
+        &::after {
+            content: "";
+            position: absolute;
+            background-color: currentColor;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: inherit;
+            margin: 3px;
+            transform: scale(0);
+            transition: transform 0.2s ease-out;
+        }
+
+        &:checked {
+            &::after {
+                transform: scale(1);
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

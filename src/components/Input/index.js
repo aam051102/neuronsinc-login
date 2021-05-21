@@ -4,7 +4,7 @@ import "./index.scss";
 
 const Input = (props) => {
     return (
-        <div className="input-wrapper">
+        <div className={`input-wrapper ${props.name}-wrapper`}>
             <label
                 className="input-label"
                 htmlFor={props.form + "_" + props.name}
@@ -16,6 +16,7 @@ const Input = (props) => {
                 id={props.form + "_" + props.name}
                 name={props.name}
                 type={props.type}
+                autoComplete={props.autoComplete}
                 required={props.required}
             />
         </div>

@@ -1,3 +1,4 @@
+/* Input */
 .input-wrapper {
     margin-bottom: 1.5rem;
 
@@ -22,5 +23,11 @@
         width: 100%;
         color: #666666;
         background-color: #ffffff;
+        outline: none;
+        transition: border-color 0.2s ease-out;
+
+        &:focus {
+            border-color: #666666;
+        }
     }
 }
