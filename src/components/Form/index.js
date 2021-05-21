@@ -11,11 +11,28 @@ const Form = (props) => {
         e.preventDefault();
 
         let valid = true;
-        const data = new FormData(formRef.current);
+        const data = formRef.current.elements;
 
-        for (const [key, value] of data.entries()) {
-            console.log(key, value);
-            // TODO: Validity check
+        for (let i = 0; i < data.length; i++) {
+            const el = data[i];
+
+            if (el.value !== "") {
+                console.log(
+                    el.pattern,
+                    new RegExp(el.pattern),
+                    new RegExp(el.pattern).test(el.value)
+                );
+                if (
+                    el.pattern &&
+                    new RegExp(el.pattern).test(el.value) === false
+                ) {
+                    valid = false;
+                }
+            } else if (el.required) {
+                valid = false;
+            }
+
+            // TODO: Provide feedback
         }
 
         if (valid) {
@@ -27,7 +44,12 @@ const Form = (props) => {
 
     /* Return */
     return (
-        <form className="form" ref={formRef} onSubmit={checkFormValidity}>
+        <form
+            className="form"
+            ref={formRef}
+            onSubmit={checkFormValidity}
+            noValidate
+        >
             {props.children}
         </form>
     );

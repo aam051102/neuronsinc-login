@@ -41,15 +41,16 @@ const LoginPage = () => {
 
                         <Form onFormValid={handleLoginFormValid}>
                             <Input
-                                form="user-login"
+                                id="user-login_email"
                                 type="email"
                                 name="email"
                                 autoComplete="email"
+                                pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" // Basic HTML5 email regex. More complex version should be used in real scenario.
                                 required
                             />
 
                             <Input
-                                form="user-login"
+                                id="user-login_password"
                                 type="password"
                                 name="password"
                                 autoComplete="current-password"

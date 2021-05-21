@@ -1,6 +1,7 @@
 /* Input */
 .input-wrapper {
     margin-bottom: 1.5rem;
+    position: relative;
 
     & > .input-label {
         font-size: 1rem;
@@ -28,6 +29,23 @@
 
         &:focus {
             border-color: #666666;
+        }
+    }
+
+    .input-password-show-button {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background: transparent;
+        width: auto;
+        padding: 1rem;
+
+        img {
+            vertical-align: bottom;
+        }
+
+        &::after {
+            display: none;
         }
     }
 }
