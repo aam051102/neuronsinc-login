@@ -2,11 +2,11 @@ import React from "react";
 import Header from "../Header";
 import Input from "../Input";
 import Form from "../Form";
+import PasswordInput from "../PasswordInput";
 
-import DrawingLogin from "../../assets/images/drawing-login.svg";
+import DrawingLogin from "../../assets/images/login-illust.svg";
 
 import "./index.scss";
-import PasswordInput from "../PasswordInput";
 
 const LoginPage = () => {
     /* --- Functions --- */

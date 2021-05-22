@@ -45,4 +45,3 @@ npm run test
 If I had more time:
 
 -   I would have provided more descriptive user feedback for form validation.
--   I would have made more visual changes for the password showing/hiding.

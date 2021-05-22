@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Input from "../Input";
 
-import eyeHidden from "../../assets/images/eye-hidden.svg";
+import { ReactComponent as EyeIcon } from "../../assets/images/eye-ico.svg";
 
 import "./index.scss";
 
@@ -20,11 +20,13 @@ const PasswordInput = (props) => {
     return (
         <Input type={isPasswordShown ? "text" : "password"} {...props}>
             <button
-                className="input-password-show-button"
+                className={`input-password-show-button${
+                    isPasswordShown ? " password-shown" : ""
+                }`}
                 onClick={handleShowPassword}
                 data-testid="show-password-button"
             >
-                <img src={eyeHidden} alt="Show password." />
+                <EyeIcon />
             </button>
         </Input>
     );

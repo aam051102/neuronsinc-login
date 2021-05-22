@@ -1,5 +1,9 @@
 /* Password Input */
 .input-wrapper {
+    .input-password-show-checkbox {
+        display: none;
+    }
+
     .input-password-show-button {
         position: absolute;
         right: 0;
@@ -7,9 +11,19 @@
         background: transparent;
         width: auto;
         padding: 0.8rem;
+        color: #d6d6d6;
+        transition: color 0.2s ease-out;
 
-        img {
+        svg {
             vertical-align: bottom;
+        }
+
+        &.password-shown {
+            svg {
+                .eye-strike-through {
+                    display: none;
+                }
+            }
         }
 
         &::after {
