@@ -1,5 +1,5 @@
 /* Password Input */
-.input-wrapper {
+.password-input-wrapper {
     .input-password-show-checkbox {
         display: none;
     }
@@ -12,13 +12,14 @@
         width: auto;
         padding: 0.8rem;
         color: #d6d6d6;
-        transition: color 0.2s ease-out;
 
         svg {
             vertical-align: bottom;
         }
 
         &.password-shown {
+            color: #aeaeae;
+
             svg {
                 .eye-strike-through {
                     display: none;
@@ -28,6 +29,12 @@
 
         &::after {
             display: none;
+        }
+    }
+
+    .input-field {
+        &[type="password"] {
+            font-family: monospace;
         }
     }
 }

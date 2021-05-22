@@ -18,17 +18,19 @@ const PasswordInput = (props) => {
 
     /* Return */
     return (
-        <Input type={isPasswordShown ? "text" : "password"} {...props}>
-            <button
-                className={`input-password-show-button${
-                    isPasswordShown ? " password-shown" : ""
-                }`}
-                onClick={handleShowPassword}
-                data-testid="show-password-button"
-            >
-                <EyeIcon />
-            </button>
-        </Input>
+        <div className="password-input-wrapper">
+            <Input type={isPasswordShown ? "text" : "password"} {...props}>
+                <button
+                    className={`input-password-show-button${
+                        isPasswordShown ? " password-shown" : ""
+                    }`}
+                    onClick={handleShowPassword}
+                    data-testid="show-password-button"
+                >
+                    <EyeIcon />
+                </button>
+            </Input>
+        </div>
     );
 };
 
