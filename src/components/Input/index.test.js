@@ -1,13 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import Input from "./";
 
-test("renders password field", () => {
-    render(<Input type="password" />);
-
-    const passwordField_DOM = screen.getByTestId(/password-field/i);
-    expect(passwordField_DOM).toBeInTheDocument();
-});
-
 test("renders field with correct type property", () => {
     render(<Input type="email" />);
 

@@ -1,0 +1,19 @@
+/* Password Input */
+.input-wrapper {
+    .input-password-show-button {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background: transparent;
+        width: auto;
+        padding: 0.8rem;
+
+        img {
+            vertical-align: bottom;
+        }
+
+        &::after {
+            display: none;
+        }
+    }
+}

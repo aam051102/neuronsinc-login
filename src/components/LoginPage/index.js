@@ -6,6 +6,7 @@ import Form from "../Form";
 import DrawingLogin from "../../assets/images/drawing-login.svg";
 
 import "./index.scss";
+import PasswordInput from "../PasswordInput";
 
 const LoginPage = () => {
     /* --- Functions --- */
@@ -50,9 +51,8 @@ const LoginPage = () => {
                                 required
                             />
 
-                            <Input
+                            <PasswordInput
                                 id="user-login_password"
-                                type="password"
                                 name="password"
                                 autoComplete="current-password"
                                 required
