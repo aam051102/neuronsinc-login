@@ -40,8 +40,6 @@ npm run test
 
 ---
 
-## If I had more time
+## Notes
 
-If I had more time:
-
--   I would have provided more descriptive user feedback for form validation.
+If I had more time, I would have provided more descriptive user feedback for form validation. The main hindrance was the lack of design.
