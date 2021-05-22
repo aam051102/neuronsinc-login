@@ -32,7 +32,7 @@ npm run start
 
 ### Test
 
-To run the unit test, use the following command.
+To run the unit tests, use the following command.
 
 ```
 npm run test
