@@ -13,7 +13,7 @@
     button {
         font-family: inherit;
         font-weight: 400;
-        font-size: 1rem;
+        font-size: 0.95rem;
         text-align: center;
         border: 0;
         color: #ffffff;
@@ -68,6 +68,7 @@
         height: 1.3rem;
         margin: 0;
         position: relative;
+        outline: none;
         background-color: #ffffff;
 
         &::after {
