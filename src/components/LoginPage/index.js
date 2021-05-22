@@ -10,6 +10,7 @@ import "./index.scss";
 const LoginPage = () => {
     /* --- Functions --- */
     const handleLoginFormValid = () => {
+        // NOTE: Only here to have something happen in place of a normal page change.
         window.location.reload();
     };
 
@@ -45,7 +46,7 @@ const LoginPage = () => {
                                 type="email"
                                 name="email"
                                 autoComplete="email"
-                                pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" // Basic HTML5 email regex. More complex version should be used in real scenario.
+                                pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" // NOTE: Basic HTML5 email regex. More complex version should be used in real scenario.
                                 required
                             />
 
@@ -72,7 +73,10 @@ const LoginPage = () => {
                                     </label>
                                 </div>
 
-                                <a className="forgot-password" href="#">
+                                <a
+                                    className="forgot-password"
+                                    href="/" // NOTE: Only here in place of usual link.
+                                >
                                     Forgot password?
                                 </a>
                             </div>

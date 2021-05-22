@@ -17,11 +17,6 @@ const Form = (props) => {
             const el = data[i];
 
             if (el.value !== "") {
-                console.log(
-                    el.pattern,
-                    new RegExp(el.pattern),
-                    new RegExp(el.pattern).test(el.value)
-                );
                 if (
                     el.pattern &&
                     new RegExp(el.pattern).test(el.value) === false
@@ -49,6 +44,7 @@ const Form = (props) => {
             ref={formRef}
             onSubmit={checkFormValidity}
             noValidate
+            data-testid="form"
         >
             {props.children}
         </form>
