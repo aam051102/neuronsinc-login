@@ -15,19 +15,25 @@ const Form = (props) => {
 
         for (let i = 0; i < data.length; i++) {
             const el = data[i];
+            let elValid = true;
 
             if (el.value !== "") {
                 if (
                     el.pattern &&
                     new RegExp(el.pattern).test(el.value) === false
                 ) {
-                    valid = false;
+                    elValid = false;
                 }
             } else if (el.required) {
-                valid = false;
+                elValid = false;
             }
 
-            // TODO: Provide feedback
+            if (!elValid) {
+                valid = false;
+                el.classList.add("error");
+            } else {
+                el.classList.remove("error");
+            }
         }
 
         if (valid) {

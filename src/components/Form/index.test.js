@@ -30,3 +30,19 @@ test("validates pattern correctly", () => {
     submitButton_DOM.click();
     expect(testOutput).toHaveBeenCalledTimes(1);
 });
+
+test("adds error class to input element", () => {
+    render(
+        <Form>
+            <Input name="custom-field" type="text" required />
+
+            <button type="submit" data-testid="submit-button"></button>
+        </Form>
+    );
+
+    const submitButton_DOM = screen.getByTestId(/submit-button/i);
+    const inputField_DOM = screen.getByTestId(/input-field/i);
+
+    submitButton_DOM.click();
+    expect(inputField_DOM.classList).toContain("error");
+});

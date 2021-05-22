@@ -1,5 +1,11 @@
 /* Form */
 .form {
+    .input-field {
+        &.error {
+            border-color: #e31f1f;
+        }
+    }
+
     .button-wrapper {
         text-align: center;
     }
